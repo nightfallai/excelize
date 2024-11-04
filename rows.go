@@ -295,9 +295,6 @@ func (f *File) getFromStringItem(index int) string {
 		if len(f.sharedStringItem) <= index {
 			return strconv.Itoa(index)
 		}
-		if len(f.sharedStringItem) < index+1 {
-			return ""
-		}
 		offsetRange := f.sharedStringItem[index]
 		if len(offsetRange) < 2 {
 			return ""
